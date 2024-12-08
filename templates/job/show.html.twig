@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ parent() }} -Edit
+{% endblock %}
+
+{% block titre %}
+    {{ parent() | upper }} Consultation du job {{ job.getType()}}
+{% endblock %}
+{% block body %}
+    <h2> Entreprise : {{ job.company}}</h2>
+    <h2> Description : {{ job.description}}</h2>
+    <h2> Date d'expiration : {{ job.getExpireAt() | date('d-m-Y') }}
+    <h3>Image</h3>
+    {% if job.image is not null %}
+        <img src="{{job.image.url}}" alt="job.image.alt" height="50">
+
+    {% endif %}
+
+    {% for candidature in listCandidatures %}
+        <h4> Candidat </h4><br>
+        <ul type="square">
+            <li>{{ candidature.condidat}}</li>
+            <li>{{ candidature.contenu()}}</li>
+            <li>{{ candidature.date() | date('d-m-Y')}}</li>
+            <li>=====================================</li>
+        </ul>
+    {% endfor %}
+{% endblock %}

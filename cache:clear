@@ -1,0 +1,33 @@
+Script started on Mon Nov 25 09:50:58 2024
+Command: returned with error code 255
+to modify in lock file
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Nothing to install, update or remove
+Generating autoload files
+47 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+Run composer recipes at any time to see the status of your Symfony recipes.
+
+Executing script cache:clear [KO]
+ [KO]
+Script cache:clear returned with error code 255
+!!  namespace Symfony\Bundle\FrameworkBundle\Controller;
+!!  
+!!  use Psr\Container\ContainerInterface;
+!!  use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+!!  use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+!!  use Symfony\Component\HttpFoundation\Response;
+!!  
+!!  abstract class AbstractController
+!!  {
+!!  protected function render(string $view, array $parameters = [], Response $response = null): Response
+!!  {
+!!  // Code to render a Twig template
+!!  }
+!!  
+!!  protected function redirectToRoute(string $route, array $Script: returned: No such file or directory
+
+Command exit status: 1
+Script done on Mon Nov 25 09:50:58 2024
